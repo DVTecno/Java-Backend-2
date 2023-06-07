@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Ej1Extras">
+  <ClassDiagramComponents>
+    <Class name="Barco" package="" visibility="public" xPosition="1278.0" yPosition="1855.0">
+      <Fields>
+        <Field name="matricula" type="String" visibility="private"/>
+        <Field name="eslora" type="double" visibility="private"/>
+        <Field name="anhioFabricacion" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="setMatricula" returnType="void" visibility="public">
+          <Argument type="String" name="matricula"/>
+        </Method>
+        <Method name="setEslora" returnType="void" visibility="public">
+          <Argument type="double" name="eslora"/>
+        </Method>
+        <Method name="setAnhioFabricacion" returnType="void" visibility="public">
+          <Argument type="double" name="anhioFabricacion"/>
+        </Method>
+        <Method name="getMatricula" returnType="String" visibility="public"/>
+        <Method name="getEslora" returnType="double" visibility="public">
+          <Argument type="double" name="eslora"/>
+        </Method>
+        <Method name="getAnhioFabricacion" returnType="double" visibility="public">
+          <Argument type="double" name="anhioFabricacion"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Velero" package="" visibility="public" xPosition="271.0" yPosition="470.0">
+      <Fields>
+        <Field name="mastil" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="untitledMethod" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="BarcoMotor " package="" visibility="public" xPosition="1900.0" yPosition="1000.0">
+      <Fields>
+        <Field name="potenciaCv" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="YateLujo " package="" visibility="public" xPosition="271.0" yPosition="1529.0">
+      <Fields>
+        <Field name="numeroCamarotes" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Alquiler" package="" visibility="public" xPosition="1278.0" yPosition="144.0">
+      <Fields>
+        <Field name="nombreCliente" type="String" visibility="private"/>
+        <Field name="dniCliente" type="long" visibility="private"/>
+        <Field name="fechaAlquiler" type="LocalDate" visibility="private"/>
+        <Field name="fechaDevolucion" type="LocalDate" visibility="private"/>
+        <Field name="posicionAmarre" type="int" visibility="private"/>
+        <Field name="barco" type="Barco" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="Velero" target="Barco"/>
+    <IsRelation name="is" source="BarcoMotor " target="Barco"/>
+    <IsRelation name="is" source="YateLujo " target="Barco"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Ej1Extra">
+  <ClassDiagramComponents>
+    <Class name="Ej1Extra" package="ej1extra" visibility="public" xPosition="28.0" yPosition="60.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Alquiler" package="ej1extra.entidades" visibility="public" xPosition="883.0" yPosition="3.0">
+      <Fields>
+        <Field name="leer" type="Scanner" visibility="package"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="documento" type="String" visibility="private"/>
+        <Field name="fechaAlquiler" type="Calendar" visibility="private"/>
+        <Field name="fechaDevolucion" type="Calendar" visibility="private"/>
+        <Field name="posAmarre" type="String" visibility="private"/>
+        <Field name="barco" type="Barco" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="documento"/>
+          <Argument type="Calendar" name="fechaAlquiler"/>
+          <Argument type="Calendar" name="fechaDevolucion"/>
+          <Argument type="String" name="posAmarre"/>
+          <Argument type="Barco" name="barco"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getDocumento" returnType="String" visibility="public"/>
+        <Method name="setDocumento" returnType="void" visibility="public">
+          <Argument type="String" name="documento"/>
+        </Method>
+        <Method name="getFechaAlquiler" returnType="Calendar" visibility="public"/>
+        <Method name="setFechaAlquiler" returnType="void" visibility="public">
+          <Argument type="Calendar" name="fechaAlquiler"/>
+        </Method>
+        <Method name="getFechaDevolucion" returnType="Calendar" visibility="public"/>
+        <Method name="setFechaDevolucion" returnType="void" visibility="public">
+          <Argument type="Calendar" name="fechaDevolucion"/>
+        </Method>
+        <Method name="getPosAmarre" returnType="String" visibility="public"/>
+        <Method name="setPosAmarre" returnType="void" visibility="public">
+          <Argument type="String" name="posAmarre"/>
+        </Method>
+        <Method name="getBarco" returnType="Barco" visibility="public"/>
+        <Method name="setBarco" returnType="void" visibility="public">
+          <Argument type="Barco" name="barco"/>
+        </Method>
+        <Method name="alquiler" returnType="Alquiler" visibility="public">
+          <Argument type="Barco" name="barco"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Barco" package="ej1extra.entidades" visibility="public" xPosition="368.0" yPosition="3.0">
+      <Fields>
+        <Field name="matricula" type="String" visibility="protected"/>
+        <Field name="eslora" type="double" visibility="protected"/>
+        <Field name="anioFabricacion" type="int" visibility="protected"/>
+        <Field name="alquiler" type="Alquiler" visibility="protected"/>
+        <Field name="leer" type="Scanner" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="matricula"/>
+          <Argument type="double" name="eslora"/>
+          <Argument type="int" name="anioFabricacion"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getMatricula" returnType="String" visibility="public"/>
+        <Method name="setMatricula" returnType="void" visibility="public">
+          <Argument type="String" name="matricula"/>
+        </Method>
+        <Method name="getEslora" returnType="double" visibility="public"/>
+        <Method name="setEslora" returnType="void" visibility="public">
+          <Argument type="double" name="eslora"/>
+        </Method>
+        <Method name="getAnioFabricacion" returnType="int" visibility="public"/>
+        <Method name="setAnioFabricacion" returnType="void" visibility="public">
+          <Argument type="int" name="anioFabricacion"/>
+        </Method>
+        <Method name="getAlquiler" returnType="Alquiler" visibility="public"/>
+        <Method name="setAlquiler" returnType="void" visibility="public">
+          <Argument type="Alquiler" name="alquiler"/>
+        </Method>
+        <Method name="getLeer" returnType="Scanner" visibility="public"/>
+        <Method name="setLeer" returnType="void" visibility="public">
+          <Argument type="Scanner" name="leer"/>
+        </Method>
+        <Method name="totalAlquiler" returnType="void" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="BarcosaMotor" package="ej1extra.entidades" visibility="public" xPosition="1033.0" yPosition="534.0">
+      <Fields>
+        <Field name="potenciaCV" type="int" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="matricula"/>
+          <Argument type="double" name="eslora"/>
+          <Argument type="int" name="anioFabricacion"/>
+          <Argument type="int" name="potenciaCV"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPotenciaCV" returnType="int" visibility="public"/>
+        <Method name="setPotenciaCV" returnType="void" visibility="public">
+          <Argument type="int" name="potenciaCV"/>
+        </Method>
+        <Method name="totalAlquiler" returnType="void" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Velero" package="ej1extra.entidades" visibility="public" xPosition="561.0" yPosition="534.0">
+      <Fields>
+        <Field name="numMastiles" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="matricula"/>
+          <Argument type="double" name="eslora"/>
+          <Argument type="int" name="anioFabricacion"/>
+          <Argument type="int" name="numMastiles"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNumMastiles" returnType="int" visibility="public"/>
+        <Method name="setNumMastiles" returnType="void" visibility="public">
+          <Argument type="int" name="numMastiles"/>
+        </Method>
+        <Method name="totalAlquiler" returnType="void" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Yate" package="ej1extra.entidades" visibility="public" xPosition="9.0" yPosition="477.0">
+      <Fields>
+        <Field name="potenciaCV" type="int" visibility="private"/>
+        <Field name="numCamarotes" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="matricula"/>
+          <Argument type="double" name="eslora"/>
+          <Argument type="int" name="anioFabricacion"/>
+          <Argument type="int" name="potenciaCV"/>
+          <Argument type="int" name="numCamarotes"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPotenciaCV" returnType="int" visibility="public"/>
+        <Method name="setPotenciaCV" returnType="void" visibility="public">
+          <Argument type="int" name="potenciaCV"/>
+        </Method>
+        <Method name="getNumCamarotes" returnType="int" visibility="public"/>
+        <Method name="setNumCamarotes" returnType="void" visibility="public">
+          <Argument type="int" name="numCamarotes"/>
+        </Method>
+        <Method name="totalAlquiler" returnType="void" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="AlquilerServicios" package="ej1extra.servicio" visibility="public" xPosition="9.0" yPosition="231.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="mostrarAlquileres" returnType="void" visibility="public">
+          <Argument type="Barco" name="barco"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="ej1extra.servicio.AlquilerServicios" target="ej1extra.entidades.Barco" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ej1extra.entidades.Barco" target="ej1extra.entidades.Alquiler" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="ej1extra.entidades.Alquiler" target="ej1extra.entidades.Barco" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="ej1extra.entidades.Velero" target="ej1extra.entidades.Barco"/>
+    <IsRelation name="is" source="ej1extra.entidades.BarcosaMotor" target="ej1extra.entidades.Barco"/>
+    <IsRelation name="is" source="ej1extra.entidades.Yate" target="ej1extra.entidades.Barco"/>
+    <HasRelation name="alquiler" source="ej1extra.entidades.Barco" target="ej1extra.entidades.Alquiler" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="barco" source="ej1extra.entidades.Alquiler" target="ej1extra.entidades.Barco" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
